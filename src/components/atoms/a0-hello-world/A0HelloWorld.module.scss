@@ -1,0 +1,8 @@
+@use '@/styles/global.scss' as *;
+
+.main {
+	h1 {
+		font-size: fluidFont(16px, 32px, 320px, 1366px);
+		color: $colorBlue;
+	}
+}

@@ -1,0 +1,13 @@
+/*
+Automatically calculate the font size based on the current viewport width.
+The returned value dependes on the min. and max. values desired for the viewport breakpoints provided.
+*/
+@function fluidFont($min, $max, $min-breakpoint, $max-breakpoint) {
+	$slope: math.div($max - $min, $max-breakpoint - $min-breakpoint);
+	$slope-to-unit: $slope * 100;
+	$intercept: pxToRem($min - $slope * $min-breakpoint);
+	$min-rem: pxToRem($min);
+	$max-rem: pxToRem($max);
+
+	@return clamp(#{$min-rem}, #{$slope-to-unit}vw + #{$intercept}, #{$max-rem});
+}

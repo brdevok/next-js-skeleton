@@ -1,7 +1,14 @@
 import type { FC } from 'react';
+import A0HelloWorld from '@/components/atoms/a0-hello-world/A0HelloWorld';
+
+import '@/styles/main.scss';
 
 const Page: FC = () => {
-  return <h1>Hello, Next.js!</h1>
-}
+	return (
+		<>
+			<A0HelloWorld />
+		</>
+	);
+};
 
 export default Page;

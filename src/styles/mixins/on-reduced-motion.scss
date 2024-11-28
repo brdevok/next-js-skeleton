@@ -1,0 +1,8 @@
+/*
+Media query for styles that should be applied when reduced motion is enabled in user preferences.
+*/
+@mixin onReducedMotion {
+	@media (prefers-reduced-motion) {
+		@content;
+	}
+}	

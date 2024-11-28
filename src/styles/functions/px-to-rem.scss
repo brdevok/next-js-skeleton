@@ -1,0 +1,8 @@
+/*
+Convert any pixel value to rems.
+*/
+@function pxToRem($px) {
+	$rems: math.div($px, 16px) * 1rem;
+
+	@return $rems;
+}
