@@ -20,9 +20,10 @@
     "jsx": "preserve",
 		"baseUrl": "./",
 		"paths": {
-			"_app": ["app/*"],
-			"_public": ["public/*"],
 			"@/*": ["src/*"],
+			"_app/*": ["app/*"],
+			"_public/*": ["public/*"],
+			"_storybook/*": [".storybook/*"],
 		},
     "plugins": [
       {
@@ -34,6 +35,7 @@
     "next-env.d.ts",
 		"eslint.config.mjs",
 		".eslint/**/*.js",
+		".storybook/**/*.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"

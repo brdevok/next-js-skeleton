@@ -1,0 +1,1 @@
+export type Category = 'data' | 'visual' | 'accessibility' | 'action' | 'state' | 'template' | 'performance' | 'other';
