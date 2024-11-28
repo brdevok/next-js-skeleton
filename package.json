@@ -1,0 +1,30 @@
+{
+  "name": "next-js-and-dato-cms-skeleton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^15.0.3",
+    "@types/node": "22.9.3",
+    "@types/react": "18.3.12",
+    "eslint": "9.15.0",
+    "eslint-config-next": "15.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.1",
+    "typescript": "5.7.2",
+    "typescript-eslint": "^8.16.0"
+  }
+}
