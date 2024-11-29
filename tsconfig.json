@@ -33,6 +33,7 @@
   },
   "include": [
     "next-env.d.ts",
+    "next.config.ts",
 		"eslint.config.mjs",
 		".eslint/**/*.js",
 		".scripts/**/*.ts",
