@@ -1,0 +1,12 @@
+import type { FC } from 'react';
+import type { A{{ id }}{{ pascalCase name }}Props } from './A{{ id }}{{ pascalCase name }}.types';
+
+import css from './A{{ id }}{{ pascalCase name }}.module.scss';
+
+export const A{{ id }}{{ pascalCase name }}: FC<A{{ id }}{{ pascalCase name }}Props> = (props) => {
+	return (
+		<div className={css.main}>
+			{props.children}
+		</div>
+	);
+};

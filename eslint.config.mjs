@@ -13,11 +13,14 @@ export default tsEslint.config({
 	ignores: ['.next/**'],
 	files: ['**/*.{js,mjs,ts,tsx}'],
 	languageOptions: {
-		globals: globals.browser,
 		parser: tsEslint.parser,
 		parserOptions: {
 			projectService: true,
 			tsconfigRootDir: import.meta.dirname,
+		},
+		globals: {
+			...globals.browser,
+			...globals.node,
 		},
 	},
 	plugins: {

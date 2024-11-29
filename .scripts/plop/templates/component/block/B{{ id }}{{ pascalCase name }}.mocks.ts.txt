@@ -1,0 +1,3 @@
+import type { B{{ id }}{{ pascalCase name }}Props } from './B{{ id }}{{ pascalCase name }}.types';
+
+export const b{{ id }}{{ pascalCase name }}DefaultMocks: B{{ id }}{{ pascalCase name }}Props = {};

@@ -6,7 +6,7 @@ import '@/styles/main.scss';
 const Page: FC = () => {
 	return (
 		<>
-			<A0HelloWorld />
+			<A0HelloWorld message='This is the home page.'/>
 		</>
 	);
 };

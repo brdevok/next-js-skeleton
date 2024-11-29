@@ -2,13 +2,15 @@
   "name": "next-js-and-dato-cms-skeleton",
   "version": "1.0.0",
   "main": "index.js",
+	"type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "plop": "node --experimental-specifier-resolution=node --no-warnings --loader=ts-node/esm .scripts/plop/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +30,7 @@
     "@storybook/nextjs": "^8.4.5",
     "@storybook/react": "^8.4.5",
     "@storybook/test": "^8.4.5",
+    "@types/lodash-es": "^4.17.12",
     "@types/node": "22.9.3",
     "@types/react": "18.3.12",
     "eslint": "9.15.0",
@@ -35,9 +38,13 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-storybook": "^0.11.1",
+    "lodash-es": "^4.17.21",
+    "plop": "^4.0.1",
     "prettier": "^3.4.1",
     "sass": "^1.81.0",
     "storybook": "^8.4.5",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typescript": "5.7.2",
     "typescript-eslint": "^8.16.0"
   },

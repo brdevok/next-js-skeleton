@@ -1,0 +1,12 @@
+import type { FC } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: '{{ titleCase name}} Page',
+};
+
+const {{ pascalCase name }}Page: FC = () => {
+	return <></>;
+};
+
+export default {{ pascalCase name }}Page;

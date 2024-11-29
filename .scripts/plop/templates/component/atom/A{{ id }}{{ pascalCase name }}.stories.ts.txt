@@ -1,0 +1,21 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { abstractArgTypes } from '@/storybook/argTypes.collections';
+import { A{{ id }}{{ pascalCase name }} } from './A{{ id }}{{ pascalCase name }}';
+import { a{{ id }}{{ pascalCase name }}DefaultMocks } from './A{{ id }}{{ pascalCase name }}.mocks';
+
+const meta = {
+	title: 'Components/Atoms/A{{ id }}{{ pascalCase name }}',
+	component: A{{ id }}{{ pascalCase name }},
+	tags: ['autodocs'],
+	argTypes: {
+		...abstractArgTypes,
+	},
+} satisfies Meta<typeof A{{ id }}{{ pascalCase name }}>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+	args: a{{ id }}{{ pascalCase name }}DefaultMocks,
+};

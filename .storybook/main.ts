@@ -22,12 +22,12 @@ const config: StorybookConfig = {
 			...wp.resolve,
 			alias: {
 				...wp.resolve?.alias,
-				/* eslint-disable @typescript-eslint/naming-convention, no-undef */
+				/* eslint-disable @typescript-eslint/naming-convention */
 				'@': resolve(process.cwd(), 'src'),
 				_app: resolve(process.cwd(), 'app'),
 				_public: resolve(process.cwd(), 'public'),
 				_storybook: resolve(process.cwd(), '.storybook'),
-				/* eslint-enable @typescript-eslint/naming-convention, no-undef */
+				/* eslint-enable @typescript-eslint/naming-convention */
 			},
 		};
 
