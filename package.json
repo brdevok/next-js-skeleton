@@ -1,7 +1,8 @@
 {
-  "name": "next-js-and-dato-cms-skeleton",
   "version": "1.0.0",
-  "main": "index.js",
+  "name": "next-js-skeleton",
+  "author": "Braian Rosas <brdevok@outlook.com> (https://github.com/brdevok)",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -12,9 +13,6 @@
     "build-storybook": "storybook build",
     "plop": "node --experimental-specifier-resolution=node --no-warnings --loader=ts-node/esm .scripts/plop/index.ts"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "clsx": "^2.1.1",
     "lodash-es": "^4.17.21",
@@ -48,5 +46,9 @@
     "ts-node": "^10.9.2",
     "typescript": "5.7.2",
     "typescript-eslint": "^8.16.0"
-  }
+  },
+	"engines": {
+		"node": ">=20.12.1",
+		"npm": ">=10.5.1"
+	}
 }
