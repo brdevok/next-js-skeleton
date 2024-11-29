@@ -1,11 +1,13 @@
 import type { FC } from 'react';
+import clsx from 'clsx';
+import { getAbstractAttributes as attr } from '@/utils/component/getAbstractAttributes';
 import type { O{{ id }}{{ pascalCase name }}Props } from './O{{ id }}{{ pascalCase name }}.types';
 
 import css from './O{{ id }}{{ pascalCase name }}.module.scss';
 
 export const O{{ id }}{{ pascalCase name }}: FC<O{{ id }}{{ pascalCase name }}Props> = (props) => {
 	return (
-		<div className={css.main}>
+		<div {...attr(props)} className={clsx(css.main, props.className)}>
 			{props.children}
 		</div>
 	);

@@ -2,7 +2,7 @@
   "name": "next-js-and-dato-cms-skeleton",
   "version": "1.0.0",
   "main": "index.js",
-	"type": "module",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,6 +16,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "clsx": "^2.1.1",
+    "lodash-es": "^4.17.21",
     "next": "^15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -38,7 +40,6 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-storybook": "^0.11.1",
-    "lodash-es": "^4.17.21",
     "plop": "^4.0.1",
     "prettier": "^3.4.1",
     "sass": "^1.81.0",

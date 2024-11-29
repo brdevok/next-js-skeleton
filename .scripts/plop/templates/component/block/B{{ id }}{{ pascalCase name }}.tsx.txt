@@ -6,9 +6,7 @@ import css from './B{{ id }}{{ pascalCase name }}.module.scss';
 export const B{{ id }}{{ pascalCase name }}: FC<B{{ id }}{{ pascalCase name }}Props> = (props) => {
 	return (
 		<section className={css.main}>
-			<div className='block-content'>
-				{props.children}
-			</div>
+			{props.children}
 		</section>
 	);
 };
