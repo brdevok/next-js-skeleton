@@ -47,10 +47,5 @@
     "ts-node": "^10.9.2",
     "typescript": "5.7.2",
     "typescript-eslint": "^8.16.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
