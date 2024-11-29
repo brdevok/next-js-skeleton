@@ -8,6 +8,6 @@ export type AbstractProps = {
 	tabIndex?: number;
 	style?: CSSProperties;
 } & Record<`data-${string}`, string | number | boolean | null | undefined> &
-	AriaAttributes;
+AriaAttributes;
 
 export type AbstractLayoutProps = Pick<AbstractProps, 'children'>;

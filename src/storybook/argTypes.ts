@@ -1,4 +1,3 @@
- 
 import type { InputType } from 'storybook/internal/types';
 import { argTypeCategory } from './argTypes.utils';
 

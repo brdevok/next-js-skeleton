@@ -1,7 +1,7 @@
 {
 	"tabWidth": 1,
 	"useTabs": true,
-	"semicolos": true,
+	"semi": true,
 	"singleQuote": true,
 	"quoteProps": "as-needed",
 	"trailingComma": "all",
