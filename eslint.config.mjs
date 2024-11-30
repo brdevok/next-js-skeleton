@@ -7,7 +7,7 @@ import nextPlugin from '@next/eslint-plugin-next';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import storybookPlugin from 'eslint-plugin-storybook';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import rules from './.eslint/rules.mjs';
+import rules from './.rules/eslint.mjs';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [

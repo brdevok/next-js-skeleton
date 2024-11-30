@@ -5,10 +5,10 @@ import '@/styles/main.scss';
 
 const Page: FC = () => {
 	return (
-		<>
+	<>
 			<A0HelloWorld message="This is the home page." />
 		</>
-	);
-};
+	)
+}
 
-export default Page;
+export default Page

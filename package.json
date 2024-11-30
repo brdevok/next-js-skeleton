@@ -10,6 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+		"stylelint": "stylelint **/*.scss",
+		"stylelint:fix": "stylelint --fix **/*.scss",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "plop": "node --experimental-specifier-resolution=node --no-warnings --loader=ts-node/esm .scripts/plop/index.ts"
@@ -44,6 +46,8 @@
     "prettier": "^3.4.1",
     "sass": "^1.81.0",
     "storybook": "^8.4.5",
+    "stylelint": "^16.11.0",
+    "stylelint-scss": "^6.10.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "5.7.2",
