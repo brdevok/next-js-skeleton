@@ -33,14 +33,16 @@
   },
   "include": [
     "next-env.d.ts",
+    "next.config.ts",
 		"eslint.config.mjs",
-		".eslint/**/*.js",
+		"stylelint.config.mjs",
+		".rules/**/*.js",
 		".scripts/**/*.ts",
 		".storybook/**/*.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, ".rules/stylelint.mjs", ".rules/eslint.mjs"  ],
   "exclude": [
     "node_modules",
   ]

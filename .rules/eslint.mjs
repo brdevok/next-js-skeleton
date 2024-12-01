@@ -3,7 +3,10 @@
 
 /** @type {import('eslint').Linter.Config['rules']} */
 export default {
-	endOfLine: 'off',
+	'curly': 'error',
+	'eqeqeq': 'error',
+	'yoda': 'error',
+	'camelcase': 'off',
 	'no-debugger': 'warn',
 	'no-misleading-character-class': 'warn',
 	'no-warning-comments': 'warn',
@@ -53,11 +56,9 @@ export default {
 	'use-isnan': 'error',
 	'valid-typeof': 'error',
 	'accessor-pairs': 'error',
-	curly: 'error',
 	'default-case-last': 'error',
 	'default-param-last': 'error',
 	'dot-notation': 'error',
-	eqeqeq: 'error',
 	'func-name-matching': 'error',
 	'no-alert': 'error',
 	'no-bitwise': 'error',
@@ -123,10 +124,6 @@ export default {
 	'require-await': 'error',
 	'require-unicode-regexp': 'error',
 	'symbol-description': 'error',
-	yoda: 'error',
-	indent: ['error', 'tab'],
-	quotes: ['error', 'single'],
-	semi: ['error', 'always'],
 	'arrow-body-style': ['error', 'always'],
 	'func-names': ['error', 'never'],
 	'func-style': ['error', 'expression'],
@@ -151,10 +148,20 @@ export default {
 		},
 	],
 	'consistent-return': 'off',
-	camelcase: 'off',
-	// --------------------------------------------------------------------------
-	// Typescript rules
-	// --------------------------------------------------------------------------
+	'@stylistic/eol-last': 'off',
+	'@stylistic/no-tabs': 'off',
+	'@stylistic/indent': ['error', 'tab'],
+	'@stylistic/quotes': ['error', 'single'],
+	'@stylistic/semi': ['error', 'always'],
+	'@stylistic/member-delimiter-style': [
+		'error',
+		{
+			multiline: {
+				delimiter: 'semi',
+				requireLast: true,
+			},
+		},
+	],
 	'@typescript-eslint/no-empty-object-type': 'warn',
 	'@typescript-eslint/await-thenable': 'error',
 	'@typescript-eslint/consistent-generic-constructors': 'error',

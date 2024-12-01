@@ -1,13 +1,14 @@
-// Libraries
+/* stylelint-disable no-invalid-position-at-import-rule */
+/* Libraries */
 @use "sass:math";
 
-// Variables
+/* Variables */
 @import './variables/colors.scss';
 
-// Functions
+/* Functions */
 @import './functions/px-to-rem.scss';
 @import './functions/fluid-font.scss';
 
-// Mixins
+/* Mixins */
 @import './mixins/on-reduced-motion.scss';
 @import './mixins/visually-hidden.scss';
