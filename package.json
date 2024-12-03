@@ -16,7 +16,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "plop": "node --experimental-specifier-resolution=node --no-warnings --loader=ts-node/esm .scripts/plop/index.ts",
-    "postinstall": "npm install -D husky"
+    "prepare": "husky"
   },
   "dependencies": {
     "clsx": "^2.1.1",
