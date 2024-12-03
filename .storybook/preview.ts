@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react';
 
+import '@/styles/main.scss';
+
 const preview: Preview = {
 	parameters: {
 		layout: 'fullscreen',
