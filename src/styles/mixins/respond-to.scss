@@ -1,0 +1,29 @@
+/// A mixin to apply styles for screens with a minimum width.
+/// 
+/// @param {Number} $width - The minimum width of the screen.
+/// 
+/// @example scss
+/// @include respondMin(768px) {
+///   // Your styles here
+/// }
+@mixin respondMin($width) {
+	/* stylelint-disable-next-line media-query-no-invalid */
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+/// A mixin to apply styles for screens with a maximum width.
+///
+/// @param {Number} $width - The maximum width of the screen.
+/// 
+/// @example scss
+/// @include respondMax(768px) {
+///   // Your styles here
+/// }
+@mixin respondMax($width) {
+	/* stylelint-disable-next-line media-query-no-invalid */
+	@media (max-width: $width) {
+		@content;
+	}
+}
