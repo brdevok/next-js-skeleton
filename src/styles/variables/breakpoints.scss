@@ -1,0 +1,16 @@
+/*
+SASS variables for viewport breakpoints.
+
+These variables are defined here for use in styles and are synchronized with 
+the `ViewportWidth` enum in the TypeScript file located at `data/styles/breakpoints.ts`.
+*/
+
+$minViewportWidth: 375px;
+$maxViewportWidth: 1920px;
+
+$viewport480: 480px;
+$viewport600: 600px;
+$viewport1024: 1024px;
+$viewport1280: 1280px;
+$viewport1440: 1440px;
+$viewport1600: 1600px;
