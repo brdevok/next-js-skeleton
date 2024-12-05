@@ -1,7 +1,19 @@
-/*
-Automatically calculate the font size based on the current viewport width.
-The returned value dependes on the min. and max. values desired for the viewport breakpoints provided.
-*/
+/// Generates a fluid font size that adjusts dynamically between a specified range of breakpoints.
+///
+/// This function creates a font size that scales smoothly between two values (`$min` and `$max`) 
+/// based on the viewport width, while being clamped to these minimum and maximum values.
+///
+/// @param {Number} $min - The minimum font size (in pixels) when the viewport width equals `$min-breakpoint`.
+/// @param {Number} $max - The maximum font size (in pixels) when the viewport width equals `$max-breakpoint`.
+/// @param {Number} $min-breakpoint - The viewport width (in pixels) where the font size starts scaling from `$min`.
+/// @param {Number} $max-breakpoint - The viewport width (in pixels) where the font size stops scaling at `$max`.
+/// @return {String} A `clamp()` CSS function for the fluid font size.
+///
+/// @example scss - Usage example
+/// h1 {
+///   font-size: fluidFont(16px, 24px, 320px, 1280px);
+/// }
+///
 @function fluidFont($min, $max, $min-breakpoint, $max-breakpoint) {
 	$slope: math.div($max - $min, $max-breakpoint - $min-breakpoint);
 	$slope-to-unit: $slope * 100;
