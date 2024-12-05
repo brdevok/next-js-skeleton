@@ -1,0 +1,24 @@
+/// Generates a fluid size that scales proportionally between two values based on viewport width.
+///
+/// This function is useful for creating responsive properties (e.g., width, padding, margin) 
+/// that dynamically adjust between specified minimum and maximum values as the viewport size changes.
+///
+/// @param {Number} $min - The minimum size (in any CSS unit) applied at `$min-breakpoint`.
+/// @param {Number} $max - The maximum size (in the same unit as `$min`) applied at `$max-breakpoint`.
+/// @param {Number} $min-breakpoint - The viewport width (in pixels) where the scaling begins at `$min`.
+/// @param {Number} $max-breakpoint - The viewport width (in pixels) where the scaling stops at `$max`.
+/// @return {String} A `clamp()` CSS function for the fluid size.
+///
+/// @example scss - Usage example
+/// .container {
+///   padding: fluidSize(16px, 32px, 320, 1280);
+///   // Generates: padding: clamp(16px, 1.5625vw + 10px, 32px);
+/// }
+///
+@function fluidSize($min, $max, $min-breakpoint, $max-breakpoint) {
+	$slope: math.div($max - $min, $max-breakpoint - $min-breakpoint);
+	$slope-to-unit: $slope * 100;
+	$intercept: $min - $slope * $min-breakpoint;
+
+	@return clamp(#{$min}, #{$slope-to-unit}vw + #{$intercept}, #{$max});
+}
