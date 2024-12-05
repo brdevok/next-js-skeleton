@@ -1,6 +1,17 @@
-/*
-Convert any pixel value to rems.
-*/
+/// Converts a pixel value to a rem value based on a root font size of 16px.
+///
+/// This function simplifies converting pixel values to rems for scalable and accessible typography.
+/// The default root font size is assumed to be 16px, a common standard.
+///
+/// @param {Number} $px - The pixel value to be converted.
+/// @return {Number} The equivalent rem value.
+///
+/// @example scss - Usage example
+/// .text {
+///   font-size: pxToRem(24); 
+///   // Generates: font-size: 1.5rem;
+/// }
+///
 @function pxToRem($px) {
 	$rems: math.div($px, 16px) * 1rem;
 

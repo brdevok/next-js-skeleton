@@ -1,6 +1,18 @@
-/*
-Media query for styles that should be applied when reduced motion is enabled in user preferences.
-*/
+/// Applies styles specifically for users who have enabled the `prefers-reduced-motion` media feature.
+/// 
+/// This mixin allows you to provide alternative styles for animations or transitions
+/// that respect the user's system preferences for reduced motion.
+///
+/// @content {Block} Styles to be applied when `prefers-reduced-motion` is enabled.
+///
+/// @example scss - Usage example
+/// .example {
+///   animation: slide-in 1s ease-in-out;
+///
+///   @include onReducedMotion {
+///     animation: none;
+///   }
+/// }
 @mixin onReducedMotion {
 	@media (prefers-reduced-motion) {
 		@content;
