@@ -129,5 +129,10 @@ export default {
 	'declaration-block-no-redundant-longhand-properties': true,
 	'shorthand-property-no-redundant-values': true,
 	'comment-whitespace-inside': 'always',
+	'function-name-case': null,
 	'scss/at-rule-no-unknown': true,
+	'scss/at-mixin-pattern': null,
+	'scss/at-function-pattern': null,
+	'scss/dollar-variable-pattern': null,
+	'scss/dollar-variable-empty-line-before': null,
 };

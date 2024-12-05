@@ -5,6 +5,7 @@ export default {
 	defaultSeverity: 'warning',
 	files: ['**/*.scss'],
 	plugins: ['stylelint-scss'],
+	extends: ['stylelint-config-standard-scss'],
 	rules: {
 		...rules,
 	},
