@@ -6,13 +6,14 @@ import stylisticPlugin from '@stylistic/eslint-plugin';
 import nextPlugin from '@next/eslint-plugin-next';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import storybookPlugin from 'eslint-plugin-storybook';
+import jestPlugin from 'eslint-plugin-jest';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import rules from './.rules/eslint.mjs';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
 	{
-		ignores: ['.next/**'],
+		ignores: ['.next/**', 'coverage/**'],
 		files: ['**/*.{js,mjs,ts,tsx}'],
 		languageOptions: {
 			parser: tsEslint.parser,
@@ -23,9 +24,11 @@ export default [
 			globals: {
 				...globals.browser,
 				...globals.node,
+				...jestPlugin.environments.globals.globals,
 			},
 		},
 		plugins: {
+			'jest': jestPlugin,
 			'storybook': storybookPlugin,
 			'react-hooks': reactHooksPlugin,
 			'@stylistic': stylisticPlugin,
@@ -39,6 +42,7 @@ export default [
 			...nextPlugin.configs.recommended.rules,
 			...nextPlugin.configs['core-web-vitals'].rules,
 			...storybookPlugin.configs.recommended.rules,
+			...jestPlugin.configs.recommended.rules,
 			...rules,
 			// Override conflictive rules for prettier
 			...eslintConfigPrettier.rules,

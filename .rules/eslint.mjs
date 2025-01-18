@@ -235,6 +235,11 @@ export default {
 			format: ['camelCase', 'PascalCase'],
 		},
 		{
+			selector: ['objectLiteralProperty', 'typeProperty'],
+			format: null,
+			modifiers: ['requiresQuotes'],
+		},
+		{
 			selector: ['function', 'classProperty'],
 			format: ['camelCase', 'PascalCase'],
 		},
