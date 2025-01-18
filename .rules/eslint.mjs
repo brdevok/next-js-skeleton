@@ -254,8 +254,8 @@ export default {
 			format: ['PascalCase'],
 		},
 		{
-			selector : 'import',
-			format: null
-		}
+			selector: 'import',
+			format: null,
+		},
 	],
 };
