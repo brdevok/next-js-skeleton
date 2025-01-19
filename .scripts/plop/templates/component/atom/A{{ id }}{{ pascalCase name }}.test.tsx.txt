@@ -1,0 +1,9 @@
+import { A{{ id }}{{ pascalCase name }} } from './A{{ id }}{{ pascalCase name }}';
+import { render } from '@testing-library/react';
+
+describe('A{{ id }}{{ pascalCase name }}', () => {
+	it('should render...', () => {
+		const { getByText } = render(<A{{ id }}{{ pascalCase name }} />);
+		expect(getByText('...')).toBeDefined();
+	});
+});

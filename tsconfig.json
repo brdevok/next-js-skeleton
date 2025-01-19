@@ -16,15 +16,23 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-		"strictNullChecks": true,
+    "strictNullChecks": true,
     "jsx": "preserve",
-		"baseUrl": "./",
-		"paths": {
-			"@/*": ["src/*"],
-			"_app/*": ["app/*"],
-			"_public/*": ["public/*"],
-			"_storybook/*": [".storybook/*"],
-		},
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "_app/*": [
+        "app/*"
+      ],
+      "_public/*": [
+        "public/*"
+      ],
+      "_storybook/*": [
+        ".storybook/*"
+      ]
+    },
     "plugins": [
       {
         "name": "next"
@@ -34,16 +42,20 @@
   "include": [
     "next-env.d.ts",
     "next.config.ts",
-		"eslint.config.mjs",
-		"stylelint.config.mjs",
-		".rules/**/*.js",
-		".scripts/**/*.ts",
-		".storybook/**/*.ts",
+    "jest.config.ts",
+    "eslint.config.mjs",
+    "stylelint.config.mjs",
+    ".rules/**/*.js",
+    ".scripts/**/*.ts",
+    ".storybook/**/*.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, ".rules/stylelint.mjs", ".rules/eslint.mjs"  ],
+    "**/*.tsx",
+    ".rules/stylelint.mjs",
+    ".rules/eslint.mjs",
+    "jest-setup/**/*.ts"
+  ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }

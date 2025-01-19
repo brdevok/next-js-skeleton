@@ -2,7 +2,7 @@ import type { CspConfig } from '@/types/global/Csp';
 import { stringifyCspHeader } from './utils/global/stringifyCspHeader';
 
 const config: CspConfig = {
-	/* eslint-disable @typescript-eslint/naming-convention, @stylistic/quotes */
+	/* eslint-disable @stylistic/quotes */
 	'default-src': "'self'",
 	'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
 	'style-src': "'self' 'unsafe-inline'",
@@ -12,7 +12,7 @@ const config: CspConfig = {
 	'base-uri': "'self'",
 	'form-action': "'self'",
 	'frame-ancestors': "'none'",
-	/* eslint-enable @typescript-eslint/naming-convention, @stylistic/quotes */
+	/* eslint-enable @stylistic/quotes */
 };
 
 const cspHeader = {

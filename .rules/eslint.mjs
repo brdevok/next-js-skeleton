@@ -231,11 +231,20 @@ export default {
 			trailingUnderscore: 'allow',
 		},
 		{
+			selector: ['objectLiteralProperty', 'typeProperty'],
+			format: ['camelCase', 'PascalCase'],
+		},
+		{
+			selector: ['objectLiteralProperty', 'typeProperty'],
+			format: null,
+			modifiers: ['requiresQuotes'],
+		},
+		{
 			selector: ['function', 'classProperty'],
 			format: ['camelCase', 'PascalCase'],
 		},
 		{
-			selector: ['variable', 'classProperty', 'objectLiteralProperty'],
+			selector: ['variable'],
 			format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
 			leadingUnderscore: 'allow',
 			trailingUnderscore: 'allow',
@@ -246,7 +255,7 @@ export default {
 		},
 		{
 			selector: 'import',
-			format: ['camelCase', 'PascalCase'],
+			format: null,
 		},
 	],
 };
