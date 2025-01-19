@@ -1,5 +1,4 @@
 import type { AbstractProps } from '@/types/components/Props';
-import { reduce } from 'lodash';
 
 /**
  * Extracts and returns a subset of properties from a given props object,
@@ -41,29 +40,11 @@ import { reduce } from 'lodash';
  * // }
  */
 export const getAbstractAttributes = (props: Partial<AbstractProps>): Partial<AbstractProps> => {
-	const getAriaAttributes = (): object => {
-		return reduce(
-			props,
-			(result, value, key) => {
-				if (key.startsWith('aria-')) {
-					result[key] = value;
-				}
-				return result;
-			},
-			{},
-		);
-	};
-
-	const getDataAttributes = (): object => {
-		return reduce(
-			props,
-			(result, value, key) => {
-				if (key.startsWith('data-')) {
-					result[key] = value;
-				}
-				return result;
-			},
-			{},
+	const getOtherAttributes = (): object => {
+		return Object.fromEntries(
+			Object.entries(props).filter(([key]) => {
+				return key.startsWith('aria-') || key.startsWith('data-');
+			}),
 		);
 	};
 
@@ -73,7 +54,6 @@ export const getAbstractAttributes = (props: Partial<AbstractProps>): Partial<Ab
 		style: props.style,
 		role: props.role,
 		tabIndex: props.tabIndex,
-		...getAriaAttributes(),
-		...getDataAttributes(),
+		...getOtherAttributes(),
 	};
 };
