@@ -10,84 +10,87 @@ This repository provides a ready-to-use **frontend template skeleton** built wit
 - **Storybook** for building, viewing, and testing UI components in isolation.
 - **ESLint** for linting JavaScript and TypeScript files, ensuring code quality.
 - **Stylelint** for linting and fixing styles in Sass files.
+- **Commitlint** for linting commit messages.
 - **Plop.js** for automating the creation of new components.
+- **Jest** as the testing library.
 - Built-in scripts for streamlined development workflows.
-
----
 
 ## Installation
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Run the **postinstall** script to finalize setup:
-   ```bash
-   npm run postinstall
-   ```
-
----
+First install all dependencies to get started:
+```bash
+npm install
+```
 
 ## Available Scripts
 
-### Development & Build Commands
+**Development & Build Commands**
 
-- **`dev`**: Starts the development server.
-  ```bash
-  npm run dev
-  ```
+```bash
+npm run dev              # Starts the development server.
+npm run build            # Builds the application for production.
+npm run start            # Starts the application in production mode.
+```
 
-- **`build`**: Builds the application for production.
-  ```bash
-  npm run build
-  ```
+**Linting & Formatting Commands**
 
-- **`start`**: Starts the application in production mode.
-  ```bash
-  npm run start
-  ```
+```bash
+npm run lint             # Runs ESLint to analyze code for potential issues.
+npm run lint:fix         # Automatically fixes ESLint issues when possible.
+npm run stylelint        # Lints Sass styles for errors and best practices.
+npm run stylelint:fix    # Fixes Stylelint errors automatically.
+```
 
-### Linting & Formatting Commands
+**TypeScript Commands**
 
-- **`lint`**: Runs ESLint to analyze code for potential issues.
-  ```bash
-  npm run lint
-  ```
+```bash
+npm run typecheck        # Checks the codebase for TypeScript type errors.
+```
 
-- **`lint:fix`**: Automatically fixes ESLint issues when possible.
-  ```bash
-  npm run lint:fix
-  ```
+**Storybook Commands**
 
-- **`stylelint`**: Lints Sass styles for errors and best practices.
-  ```bash
-  npm run stylelint
-  ```
+```bash
+npm run storybook        # Starts Storybook for isolated component development.
+```
 
-- **`stylelint:fix`**: Fixes Stylelint errors automatically.
-  ```bash
-  npm run stylelint:fix
-  ```
+**Custom Scripts**
 
-### TypeScript Commands
+```bash
+npm run plop             # Generates boilerplate files for new components.
+```
 
-- **`typecheck`**: Checks the codebase for TypeScript type errors.
-  ```bash
-  npm run typecheck
-  ```
+## Commiting
 
-### Storybook Commands
+This project follows the semantic **commit messages convention** to ensure that commit messages are structured and meaningful. Semantic commit messages help in understanding the history of changes, automating versioning, and generating changelogs.
 
-- **`storybook`**: Starts Storybook for isolated component development.
-  ```bash
-  npm run storybook
-  ```
+### Commit Message Format
 
-### Custom Scripts
+Each commit message should consist of a **type**, an optional **scope**, and a **subject**:
 
-- **`plop`**: Generates boilerplate files for new components.
-  ```bash
-  npm run plop
-  ```
-  Follow the prompts to create new components easily.
+```
+<type>(<scope>): <subject> Example:
+```
+
+Examples: 
+
+- `feature(auth): add login functionality`
+- `fix(api): handle null response`
+- `docs(readme): update installation instructions`
+- `style: adjust padding`
+- `refactor: simplify component structure`
+
+### Message Types
+
+When writing commit, lease use one of the following types:
+
+- `feature` A new feature for the user.
+- `fix` A bug fix for the user.
+- `docs` Documentation only changes.
+- `style` Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc).
+- `refactor` A code change that neither fixes a bug nor adds a feature.
+- `test` Adding missing tests or correcting existing tests.
+- `chore` Other changes that don't modify src or test files.
+- `revert` Reverts a previous commit.
+- `build` Changes that affect the build system or external dependencies.
+- `ci` Changes to our CI configuration files and scripts.
+- `temp` Temporary changes that are not intended to be included in the final product.
