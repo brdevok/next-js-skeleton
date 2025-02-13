@@ -1,5 +1,4 @@
 /* eslint-disable max-lines */
-/* eslint-disable @typescript-eslint/naming-convention */
 
 /** @type {import('eslint').Linter.Config['rules']} */
 export default {
@@ -148,6 +147,7 @@ export default {
 		},
 	],
 	'consistent-return': 'off',
+	'@stylistic/arrow-parens': 'off',
 	'@stylistic/eol-last': 'off',
 	'@stylistic/no-tabs': 'off',
 	'@stylistic/indent': ['error', 'tab'],

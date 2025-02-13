@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 /** @type {import('stylelint').Config['rules']} */
 export default {
 	'no-descending-specificity': true,
